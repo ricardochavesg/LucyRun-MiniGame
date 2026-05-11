@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cgyjlawpgy45u"]
+
+[ext_resource type="Script" uid="uid://cr84udayssau5" path="res://scenas/hud_runner.gd" id="1_rj0w1"]
+[ext_resource type="Texture2D" uid="uid://dlw5q7fxtk1l4" path="res://assets/player/heart.png" id="2_1rodw"]
+[ext_resource type="Texture2D" uid="uid://07qx54jw4q6f" path="res://assets/player/heart - copia.png" id="3_f03uv"]
+[ext_resource type="Texture2D" uid="uid://badgsjl6g7fxh" path="res://assets/vasitos/Small Vial - TEAL - Spritesheet.png" id="4_f1ulq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd778"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(0, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu24g"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(14, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njjvk"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(28, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ej11"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(42, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu0yh"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(56, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3qy2"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(70, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pnr3"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(84, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unjct"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(98, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn3bp"]
+atlas = ExtResource("4_f1ulq")
+region = Rect2(112, 0, 14, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejajx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd778")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu24g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njjvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ej11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu0yh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3qy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pnr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unjct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn3bp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[node name="HudRunner" type="CanvasLayer" unique_id=502271481]
+script = ExtResource("1_rj0w1")
+heart_full = ExtResource("2_1rodw")
+heart_empty = ExtResource("3_f03uv")
+
+[node name="LivesContainer" type="HBoxContainer" parent="." unique_id=187856112]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1413.9999
+offset_top = 28.999996
+offset_right = 680.9999
+offset_bottom = -498.0
+grow_horizontal = 0
+scale = Vector2(0.28, 0.28)
+
+[node name="Heart1" type="TextureRect" parent="LivesContainer" unique_id=1528369478]
+layout_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="LivesContainer" unique_id=393700111]
+layout_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="LivesContainer" unique_id=407536327]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="WaterproofBar" type="ProgressBar" parent="." unique_id=1263731260]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.272
+offset_left = 558.0
+offset_top = 35.0
+offset_right = -505.0
+offset_bottom = -79.25601
+
+[node name="TextureRect" type="TextureRect" parent="WaterproofBar" unique_id=1585234296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 11.0
+offset_right = -25.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterproofBar/TextureRect" unique_id=1142024344]
+texture_filter = 1
+position = Vector2(-64, 19)
+scale = Vector2(2.5, 2.25)
+sprite_frames = SubResource("SpriteFrames_ejajx")
+autoplay = "default"
+frame_progress = 0.30570805

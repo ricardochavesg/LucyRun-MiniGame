@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://xo6ah5yu6lr7"]
+
+[ext_resource type="Script" uid="uid://2ey0uns5ssej" path="res://scenas/avion_pickup.gd" id="1_a8bou"]
+[ext_resource type="Texture2D" uid="uid://dytqq3s44iuid" path="res://assets/item/1.png" id="2_0duvw"]
+[ext_resource type="Texture2D" uid="uid://djp0euk1jhw33" path="res://assets/item/2.png" id="3_isktv"]
+[ext_resource type="Texture2D" uid="uid://1qduexb2hilr" path="res://assets/item/3.png" id="4_3jtcv"]
+[ext_resource type="Texture2D" uid="uid://df18ib4ptkggc" path="res://assets/item/4.png" id="5_xw6of"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0dx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0duvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_isktv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3jtcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xw6of")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0duvw"]
+size = Vector2(99, 44)
+
+[node name="AvionPickup" type="Area2D" unique_id=644336715]
+script = ExtResource("1_a8bou")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=546527143]
+position = Vector2(1.9073486e-06, -0.99999905)
+scale = Vector2(0.10537635, 0.14141414)
+sprite_frames = SubResource("SpriteFrames_l0dx4")
+animation = &"idle"
+frame = 2
+frame_progress = 0.27101624
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438512149]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_0duvw")

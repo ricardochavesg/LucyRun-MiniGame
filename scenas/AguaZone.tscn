@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://drrv2l31jljvx"]
+
+[ext_resource type="Script" uid="uid://bs3w8uveyhrqm" path="res://scenas/agua_zone.gd" id="1_ic25y"]
+[ext_resource type="Texture2D" uid="uid://b745barf8p01y" path="res://assets/Tiles.png" id="2_vhcn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ogl8"]
+size = Vector2(16, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfcr5"]
+atlas = ExtResource("2_vhcn2")
+region = Rect2(96, 294, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a24mr"]
+atlas = ExtResource("2_vhcn2")
+region = Rect2(112, 294, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upxwr"]
+atlas = ExtResource("2_vhcn2")
+region = Rect2(128, 294, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2sg3"]
+atlas = ExtResource("2_vhcn2")
+region = Rect2(144, 294, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdplv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfcr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a24mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upxwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2sg3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AguaZone" type="Area2D" unique_id=447692635 groups=["Agua"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ic25y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1974690238]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=609674688]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6ogl8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=507286128]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bdplv")
+autoplay = "default"
+frame_progress = 0.2763243
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=472840375]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_6ogl8")

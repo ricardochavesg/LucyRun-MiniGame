@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b4xv0wuyie3pg"]
+
+[ext_resource type="Texture2D" uid="uid://c4710e1oxwxy4" path="res://assets/choco.png" id="1_25ver"]
+[ext_resource type="Script" uid="uid://dukxu4mvkrubu" path="res://scenas/chocolate_final.gd" id="1_77mbj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77mbj"]
+size = Vector2(48, 96)
+
+[node name="ChocolateFinal" type="Area2D" unique_id=1801452264]
+texture_filter = 1
+script = ExtResource("1_77mbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=482445794]
+texture = ExtResource("1_25ver")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577538723]
+texture_filter = 1
+texture_repeat = 2
+shape = SubResource("RectangleShape2D_77mbj")
+
+[node name="CPUParticles2D" type="GPUParticles2D" parent="." unique_id=1477257277]

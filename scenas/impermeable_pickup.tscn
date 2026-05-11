@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bnm6oacy7meks"]
+
+[ext_resource type="Script" uid="uid://cwy2co1em38ln" path="res://scenas/impermeable_pickup.gd" id="1_hc76i"]
+[ext_resource type="Texture2D" uid="uid://badgsjl6g7fxh" path="res://assets/vasitos/Small Vial - TEAL - Spritesheet.png" id="2_0g30y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g30y"]
+size = Vector2(34, 49.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2lwf"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(0, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5ery"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(14, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj4xq"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(28, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8be2g"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(42, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evr00"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(56, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofqhe"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(70, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnjto"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(84, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78okr"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(98, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toyig"]
+atlas = ExtResource("2_0g30y")
+region = Rect2(112, 0, 14, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_el83d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2lwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5ery")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj4xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8be2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evr00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofqhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnjto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78okr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toyig")
+}],
+"loop": true,
+"name": &"botella",
+"speed": 11.0
+}]
+
+[node name="ImpermeablePickup" type="Area2D" unique_id=783204064]
+script = ExtResource("1_hc76i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1383298136]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_0g30y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1324855009]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1631048908]
+texture_filter = 1
+position = Vector2(3.8146973e-06, -1.9073486e-06)
+scale = Vector2(2.0714285, 2.0714285)
+sprite_frames = SubResource("SpriteFrames_el83d")
+animation = &"botella"
+autoplay = "botella"
+frame_progress = 0.2685378

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://w5xijxlima4h"]
+
+[ext_resource type="Script" uid="uid://cr7ki4ihgrsq0" path="res://scenas/manguera.gd" id="1_nke76"]
+
+[node name="Manguera" type="Node2D" unique_id=737187451]
+script = ExtResource("1_nke76")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1744619311]
+collision_layer = 4
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=453254734]
+collision_layer = 2
+collision_mask = 0
