@@ -9,7 +9,7 @@ Un minijuego arcade de plataformas en 2D rápido y frenético inspirado en mecá
 🎮 **¡Ya en Itch.io!** 👉 [ricardochavesg.itch.io/lucyrun-minigame](https://ricardochavesg.itch.io/lucyrun-minigame)
 
 
-🎮 **Descarga el apk** 👉 En realeases[https://github.com/ricardochavesg/LucyRun-MiniGame/releases/tag/version]
+🎮 **Descarga el apk** 👉 [En realeases](https://github.com/ricardochavesg/LucyRun-MiniGame/releases/tag/version)
 ---
 
 ## 🕹️ Sobre el juego
