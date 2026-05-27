@@ -32,4 +32,4 @@ Un minijuego arcade de plataformas en 2D rápido y frenético inspirado en mecá
 
 1. **Clona el repo:**
    ```bash
-   git clone [https://github.com/ricardochavesg/LucyRun-MiniGame](https://github.com/ricardochavesg/LucyRun-MiniGame)
+   git clone https://github.com/ricardochavesg/LucyRun-MiniGame
