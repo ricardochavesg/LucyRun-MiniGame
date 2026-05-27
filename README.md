@@ -7,7 +7,9 @@
 Un minijuego arcade de plataformas en 2D rápido y frenético inspirado en mecánicas tipo *Geometry Dash*. Esquiva obstáculos a alta velocidad, consigue súper poderes y descubre una sorpresa especial al final.
 
 🎮 **¡Ya en Itch.io!** 👉 [ricardochavesg.itch.io/lucyrun-minigame](https://ricardochavesg.itch.io/lucyrun-minigame)
-🎮 **Descarga el apk** 👉 En realeases
+
+
+🎮 **Descarga el apk** 👉 En realeases[https://github.com/ricardochavesg/LucyRun-MiniGame/releases/tag/version]
 ---
 
 ## 🕹️ Sobre el juego
